@@ -1,18 +1,9 @@
 import {Base} from '../../utils/base.js'
 
-class Index extends Base{
+class Active extends Base{
 
     constructor(){
         super()
-    }
-    getBannerData(callback) {
-        var params = {
-            url:'banner/1',
-            sCallback:function(res) {
-                callback && callback(res)
-            }
-        }
-        this.request(params)
     }
     getActivityList(callback) {
         var params = {
@@ -25,4 +16,4 @@ class Index extends Base{
     }
 }
 
-export {Index};
+export {Active};

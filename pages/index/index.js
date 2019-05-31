@@ -67,44 +67,49 @@ Page({
   },
   _loadData:function(callback){ 
     var that=this
-    index.getBannerData((data)=>{
+    // index.getBannerData((data)=>{
+    //   that.setData({
+    //     bannerArr:data
+    //   })
+    // })
+    index.getActivityList((data)=>{
       that.setData({
-        bannerArr:data
+        productsArr:data.data
       })
     })
   },
   getData(){
-    wx.request({
-      // 前台活动列表
-      url: `${config.api}activitylist`,
-      method: 'POST',
-      header: {//请求头
-        "Content-Type": "applciation/json"
-      },
-      success: res => {
-        console.log("res----activitylist------>", res)
-      },
-    })
-    wx.request({
-      url: `${config.api}collect/wxactivity`,
-      method: 'POST',
-      header: {//请求头
-        "Content-Type": "applciation/json"
-      },
-      success: res => {
-        console.log("res----collect/wxactivity------>", res)
-      },
-    })
-    wx.request({
-      url: `${config.api}collect/wxactivitylist`,
-      method: 'POST',
-      header: {//请求头
-        "Content-Type": "applciation/json"
-      },
-      success: res => {
-        console.log("res----collect/wxactivitylist------>", res)
-      },
-    })
+    // wx.request({
+    //   // 前台活动列表
+    //   url: `${config.api}activitylist`,
+    //   method: 'POST',
+    //   header: {//请求头
+    //     "Content-Type": "applciation/json"
+    //   },
+    //   success: res => {
+    //     console.log("res----activitylist------>", res)
+    //   },
+    // })
+    // wx.request({
+    //   url: `${config.api}collect/wxactivity`,
+    //   method: 'POST',
+    //   header: {//请求头
+    //     "Content-Type": "applciation/json"
+    //   },
+    //   success: res => {
+    //     console.log("res----collect/wxactivity------>", res)
+    //   },
+    // })
+    // wx.request({
+    //   url: `${config.api}collect/wxactivitylist`,
+    //   method: 'POST',
+    //   header: {//请求头
+    //     "Content-Type": "applciation/json"
+    //   },
+    //   success: res => {
+    //     console.log("res----collect/wxactivitylist------>", res)
+    //   },
+    // })
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -114,9 +119,18 @@ Page({
       hasUserInfo: true
     })
   },
-  changeSignup(){
+  changeSignup(event){
+    console.log(event)
+    var activityId=index.getDataSet(event,'id')
+    
     wx.navigateTo({
-      url: '/personal/pages/signupForm/signupForm',
+      url: '/personal/pages/signupForm/signupForm?activityId=' + activityId,
+    })
+  },
+  changeDetail(event){
+    var activityId=index.getDataSet(event,'id')
+    wx.navigateTo({
+      url: '../detail/detail?activityId=' + activityId,
     })
   },
 })

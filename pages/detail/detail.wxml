@@ -2,25 +2,25 @@
   <view class='header'>
     <image class='header_img' src=''></image>
     <view class='header_des'>
-      <view class='header_des-title'>家庭组没事比拼大赛</view>
+      <view class='header_des-title'>{{activityDetail.name}}</view>
       <view class='header_des-browse'>
         <view class='header_des-glance'>浏览<text class='header_des-text'>777</text></view>
         <view class='header_des-collection'>收藏<text class='header_des-text'>28</text></view>
       </view>
       <view class='header_des-time'>
         <image class='header_des-icon' src='/images/iconTimeActivity.png'></image>
-        <text class='header_des-char'>2018.12.21 14:00 -- 2018.12.29 17:00</text>
+        <text class='header_des-char'>{{activityDetail.startTime}}-- {{activityDetail.endTime}}</text>
       </view>
       <view class='header_des-time'>
         <image class='header_des-icon' src='/images/iconAddressActivity.png'></image>
-        <text class='header_des-char'>壹向艺术空间 （杭州西湖区虎跑路48号）</text>
+        <text class='header_des-char'>{{activityDetail.address}}</text>
       </view>
     </view>
   </view>
 
   <view class='activity_detail'>
     <view class='activity_detail-title'>活动详情</view>
-    <view class='activity_detail-des {{readmore.status?"hidden":""}}'>此次中鸿信2018秋季拍卖会巡展来到杭州，杭州是个人文气息浓厚的城市，巡展地址选在了美丽西湖边的一座艺术展览馆——也就是我们虎跑的壹向艺术空间。在这里众多臻品将向藏家朋友展露芳容，届时诚邀四海朋友莅临现场，一同品鉴。</view>
+    <view class='activity_detail-des {{readmore.status?"hidden":""}}'>{{activityDetail.content}}</view>
     <view class='activity_detail-more' bindtap='toggle'>{{readmore.contentTip}}</view>
   </view>
 

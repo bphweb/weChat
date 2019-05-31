@@ -1,5 +1,9 @@
-import config from "../../../utils/config.js";
+import {Config} from "../../../utils/config.js";
+import {ActivityForm} from "activityForm-model.js"
+
+var activityForm = new ActivityForm()
 var util = require('../../../utils/util.js');
+
 var adds = {};
 Page({
 
@@ -127,7 +131,7 @@ Page({
           imageData: imageData
         })
         wx.request({
-          url: 'http://192.168.0.123:8080/knock/store/file',
+          url: Config.restUrl + '/store/file',
           data: {
             file: tempFilePaths,
             path: 'key'
@@ -161,7 +165,7 @@ Page({
     for (let i = 0; i < this.data.imageData.length; i++) {
       console.log('imgUrl----->', this.data.imageData[i])
       wx.uploadFile({
-        url: `${config.api}foundactivity`,
+        url: Config.restUrl +'/wxactivity/foundactivity',
         filePath: this.data.imageData[i],
         name: 'imgUrl',
         header: {
@@ -181,9 +185,9 @@ Page({
         }
       })
     }
-    this.setData({
-      formdata: ''
-    })
+    // this.setData({
+    //   formdata: ''
+    // })
   },
 
 

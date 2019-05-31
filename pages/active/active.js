@@ -1,4 +1,7 @@
 // pages/active/active.js
+import {Active} from "active-model.js"
+
+var active = new Active()
 Page({
 
   /**
@@ -72,9 +75,10 @@ Page({
     })
   },
 
-  changeDetail(){
+  changeDetail(event){
+    var activityId=active.getDataSet(event,'id')
     wx.navigateTo({
-      url: '../detail/detail',
+      url: '../detail/detail?activityId=' + activityId,
     })
   },
   changeSignup(){
@@ -86,9 +90,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this._loadData()
   },
-
+  _loadData:function(callback){ 
+    var that=this
+    active.getActivityList((data)=>{
+      that.setData({
+        productsArr:data.data
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -23,7 +23,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.2",
-	"appid": "wxacde857ddee0bbae",
+	"appid": "wxbc94f46608e9e020",
 	"projectname": "qqiaoqiao",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -40,13 +40,25 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "detail",
+					"pathName": "pages/detail/detail",
+					"query": "activityId=121",
+					"scene": null
+				}
+			]
 		}
 	}
 }

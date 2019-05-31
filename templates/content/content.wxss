@@ -82,6 +82,7 @@
   padding-right: 0;
   text-align: center;
   float: right;
+  margin-top:10px
 }
 .content_right-btn::after{
   border: none;

@@ -26,7 +26,7 @@
   <view class='padding_bg'></view>
   <view class='container'>
     <view class='container_title'>热门活动</view>
-    <template is="content"></template>
-    <template is="content"></template>
+    <template is="content" data="{{productsArr:productsArr}}"/>
+    <template is="content" />
   </view>
 </view>

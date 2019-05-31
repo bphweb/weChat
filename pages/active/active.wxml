@@ -1,4 +1,5 @@
 <import src="../../templates/content/content.wxml" />
+<!-- 搜索 -->
 <view class='header'>
   <view class='header_search'>
     <icon class='header_search-icon' type='search' size='12.5'></icon>
@@ -12,12 +13,13 @@
 
 <view class='container'>
   <view class='container_wapper'>
+    <!-- 导航栏 -->
     <scroll-view scroll-x='true' class='tab'>
       <block wx:for="{{tabData}}" wx:key="item.id">
         <view class='tabevery {{currentData==item.id? "tab_checked":""}}' data-current="{{item.id}}" bindtap='checkCurrent'>{{item.title}}</view>
       </block>
     </scroll-view>
-
+    <!-- 下拉框 -->
     <view class="container_sort">
       <view class='container_sort-title'>
         <view class='time' data-num='0' bindtap='changeToggle'>
@@ -48,7 +50,7 @@
   <!-- <template is="content" /> -->
   <swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
     <swiper-item>
-      <template is="content"></template>
+      <template is="content" data="{{productsArr:productsArr}}" />
     </swiper-item>
     <swiper-item>
       <view class='swiper_con'>welcome come to 热点</view>
