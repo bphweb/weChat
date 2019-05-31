@@ -1,0 +1,32 @@
+<import src="../../templates/content/content.wxml" />
+<view class='first_page'>
+  <view class='tab_top'>
+    <view class='tab_search' catchtap='toSearch'>
+      <icon class="tab_search-icon" size='12.5' type='search'></icon>
+      <text class='tab_search-text'>搜索热门活动</text>
+    </view>
+    <view class='tab_address'>
+      <text class='tab_address-text' bindtap='openSetting'>{{city}}</text>
+      <image src='../../images/iconDropDownList.png' class='tab_address-img'></image>
+    </view>
+  </view>
+
+  <!-- <button open-type='getUserInfo' bindgetuserinfo='getUserInfo'>用户授权</button> -->
+
+  <view class='banner'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay='{{autoplay}}' interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src='{{item}}' class="slide-image"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='padding_bg'></view>
+  <view class='container'>
+    <view class='container_title'>热门活动</view>
+    <template is="content"></template>
+    <template is="content"></template>
+  </view>
+</view>

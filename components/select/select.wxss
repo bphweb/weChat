@@ -1,0 +1,49 @@
+.content {
+  background: white;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 25rpx;
+  padding-right: 24rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content_img {
+  width: 44rpx;
+  height: 44rpx;
+  transition: all 0.3s ease;
+}
+
+.content_text {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(31, 31, 31, 1);
+}
+
+.select_list {
+  background: white;
+  box-sizing: border-box;
+  z-index: 3;
+  max-height: 120px;
+  overflow: auto;
+}
+
+.select_item {
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 25rpx;
+  padding-right: 24rpx;
+  border-top: 1rpx solid #e2e2e2;
+  /* text-align: left; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+/* .select_item:first-child {
+  border-top: none;
+} */

@@ -1,0 +1,22 @@
+.personal_detail-message{
+  height: 88rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1rpx solid rgba(214,214,219,1);
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(31,31,31,1);
+  line-height:60rpx;
+}
+.personal_detail-message:nth-child(1){
+  border-top:1rpx solid rgba(214,214,219,1);
+}
+.personal_detail-left{
+  padding-left: 25rpx;
+}
+.personal_detail-right{
+  padding-right: 25rpx;
+}

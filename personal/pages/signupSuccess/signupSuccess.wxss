@@ -1,0 +1,14 @@
+@import "../submitSuccess/submitSuccess.wxss";
+.success_desc{
+  padding-left: 77rpx;
+  padding-right: 77rpx;
+}
+.invitation{
+  background:rgba(252,121,24,1);
+  font-size:36rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  margin-bottom: 30rpx;
+  border: 0;
+}

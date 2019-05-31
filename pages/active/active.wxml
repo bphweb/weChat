@@ -1,0 +1,62 @@
+<import src="../../templates/content/content.wxml" />
+<view class='header'>
+  <view class='header_search'>
+    <icon class='header_search-icon' type='search' size='12.5'></icon>
+    <input class='header_search-input' placeholder-class='holder_input' placeholder='星球大战'></input>
+  </view>
+  <view class='header_address'>
+    <text class='header_address-title'>杭州</text>
+    <image class='header_address-img' src='../../images/iconDropDownList.png'></image>
+  </view>
+</view>
+
+<view class='container'>
+  <view class='container_wapper'>
+    <scroll-view scroll-x='true' class='tab'>
+      <block wx:for="{{tabData}}" wx:key="item.id">
+        <view class='tabevery {{currentData==item.id? "tab_checked":""}}' data-current="{{item.id}}" bindtap='checkCurrent'>{{item.title}}</view>
+      </block>
+    </scroll-view>
+
+    <view class="container_sort">
+      <view class='container_sort-title'>
+        <view class='time' data-num='0' bindtap='changeToggle'>
+          <text class='sort_title'>{{timeSelected}}</text>
+          <image class='sort_img' src='/images/iconDropList.png'></image>
+        </view>
+        <view class='time' data-num='1' bindtap='changeToggle'>
+          <text class='sort_title'>{{rankSelected}}</text>
+          <image class='sort_img' src='/images/iconDropList.png'></image>
+        </view>
+      </view>
+      <view class='container_sort-list'>
+        <view class="hidden_block {{status==0?'active':''}}">
+          <block wx:for="{{timeList}}" wx:key="{{index}}">
+            <view class='item_data' data-current="{{item}}" bindtap='changeTimeSort'>{{item}}</view>
+          </block>
+        </view>
+        <view class="hidden_block {{status==1?'active':''}}">
+          <block wx:for="{{rankList}}" wx:key="{{index}}">
+            <view class='item_data' data-current="{{item}}" bindtap='changeRankSort'>{{item}}</view>
+          </block>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- <template is="content" /> -->
+  <swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+    <swiper-item>
+      <template is="content"></template>
+    </swiper-item>
+    <swiper-item>
+      <view class='swiper_con'>welcome come to 热点</view>
+      <content hotActive="{{hotActive}}" bindtap="activeDetail"></content>
+    </swiper-item>
+    <swiper-item>
+      <view class='swiper_con'>welcome come to 关注</view>
+    </swiper-item>
+  </swiper>
+
+</view>

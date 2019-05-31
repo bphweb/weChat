@@ -1,0 +1,71 @@
+<form bindsubmit="formSubmit">
+  <view class='form_submit'>
+    <view class='form_name'>
+      <view class='name_title {{flag? "require":"error_tips"}}'>{{title.picture}}</view>
+      <view class='add_picture'>
+        <block wx:for="{{imageData}}" wx:key="{{index}}">
+          <image class='add_picture-img' src="{{item}}"></image>
+        </block>
+        <image class='add_picture-img' src='/images/iconAddCreateActivities.png' catchtap='chooseImage'></image>
+      </view>
+    </view>
+    <view class='form_name'>
+      <view class='{{flag? "require":"error_tips"}}'>{{title.theme}}</view>
+      <input class='form_input' name="name" value='{{form.theme}}'></input>
+    </view>
+    <view class='form_name sex'>
+      <view class='{{flag? "require":"error_tips"}}'>{{title.activityType}}</view>
+      <select select-data='{{activityType}}' bind:getData="getData"></select>
+    </view>
+
+    <view class='form_name'>
+      <view class='{{flag? "require":"error_tips"}}'>{{title.activityStartTime}}</view>
+      <picker class='form_input' mode="date" name='activityStartTime' value='{{form.activityStartTime}}' start="2019-01-01" end="2019-12-31" catchchange='startTimeChange'>
+        <view>{{form.activityStartTime}}</view>
+      </picker>
+    </view>
+    <view class='form_name'>
+      <view class='{{flagActivityTime? "require":"error_tips"}}'>{{title.activityEndTime}}</view>
+      <picker class='form_input' mode="date" name='activityEndTime' value='{{form.activityEndTime}}' start="2019-01-01" end="2019-12-31" bindchange='endTimeChange'>
+        <view>{{form.activityEndTime}}</view>
+      </picker> 
+    </view>
+    <view class='form_name'>
+      <view class='{{flag? "require":"error_tips"}}'>{{title.signupStartTime}}</view>
+      <picker class='form_input' mode="date" name='signupStartTime' value='{{form.signupStartTime}}' start="2019-01-01" end="2019-12-31" bindchange='signupStartTimeChange'>
+        <view>{{form.signupStartTime}}</view>
+      </picker>
+    </view>
+    <view class='form_name'>
+      <view class='{{flagActivitySignupTime? "require":"error_tips"}}'>{{title.signupEndTime}}</view>
+      <picker class='form_input' mode="date" name='signupEndTime' value='{{form.signupEndTime}}' start="2019-01-01" end="2019-12-31" bindchange='signupEndTimeChange'>
+        <view>{{form.signupEndTime}}</view>
+      </picker>
+    </view>
+
+    <view class='form_name'>
+      <view class='{{flag? "require":"error_tips"}}'>{{title.activityDesc}}</view>
+      <textarea class='form_input text_area' name='content' value='{{form.desc}}'></textarea>
+    </view>
+    <view class='form_name'>
+      <view class='{{flag? "require":"error_tips"}}'>{{title.signupNumber}}</view>
+      <input class='form_input' type='number' name="dummyEnrollNum" value='{{form.number}}'></input>
+    </view>
+    <view class='form_name'>
+      <view class='{{flag? "require":"error_tips"}}'>{{title.telphone}}</view>
+      <input class='form_input' type='number' name="contractInfo" value='{{form.telphone}}'></input>
+    </view>
+    <view class='form_name'>
+      <view class='{{flag? "require":"error_tips"}}'>{{title.placeHolder}}</view>
+      <select select-data="{{placeHolder}}" bind:getData="getData"></select>
+    </view>
+    <view class='form_name'>
+      <view class='{{flag? "require":"error_tips"}}'>{{title.activityAddress}}</view>
+      <input class='form_input' placeholder='浙江省杭州市西湖区' name="address" value='{{form.address}}'></input>
+    </view>
+  </view>
+
+  <view class='footer'>
+    <button form-type="submit" class='submit'>提交</button>
+  </view>
+</form>

@@ -1,0 +1,9 @@
+<view class="success">
+ <icon type='success' size='100'></icon>
+ <view class='success_text'>报名成功</view>
+ <view class='success_desc'>您已经成功报名该活动，点击
+ <text class='success_desc-text'>我的活动</text>即可参加
+ </view>
+ <button class='back invitation'>邀请好友一起参加</button>
+ <button type='default' class='back'>返回首页</button>
+</view>

@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/active/active",
+    "pages/mine/mine",
+    "pages/detail/detail",
+    "pages/search/search"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "subpackages": [
+    {
+      "root": "personal",
+      "pages": [
+        "pages/personalDetail/personalDetail",
+        "pages/personalCheck/personalCheck",
+        "pages/submitSuccess/submitSuccess",
+        "pages/signupSuccess/signupSuccess",
+        "pages/signupForm/signupForm",
+        "pages/activityForm/activityForm",
+        "pages/myActivity/myActivity"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "社区活动",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#FA845B",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "/images/iconRecommendedUnchoose.png",
+        "selectedIconPath": "/images/iconRecommendedUnchoose.png"
+      },
+      {
+        "pagePath": "pages/active/active",
+        "text": "活动", 
+        "iconPath": "/images/iconRecommendedUnchoose.png",
+        "selectedIconPath": "/images/iconRecommendedUnchoose.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/iconMineUnchoose.png",
+        "selectedIconPath": "/images/iconMineUnchoose.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

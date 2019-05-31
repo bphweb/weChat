@@ -1,0 +1,44 @@
+<form bindsubmit="formSubmit" class='form_submit'>
+  <view class='form_submit'>
+    <view class='form_name'>
+      <view class='name_title {{flagName? "require":"error_tips"}}'>{{messageTitle.nameTitle}}</view>
+      <input class='form_input' name="name" value='{{form.name}}'>
+      <!-- <icon type="info" size='16'></icon> -->
+      </input>
+    </view>
+    <view class='form_name telnumber'>
+      <view class='{{flag? "require":"error_tips"}}'>{{messageTitle.telnumberTitle}}</view>
+      <input class='form_input' type='number' name="telnumber" value='{{form.telnumber}}'></input>
+    </view>
+    <view class='form_name sex'>
+      <view class='{{flag? "require":"error_tips"}}'>请选择您的性别 (必填)</view>
+      <radio-group name="sex" class="form_input">
+        <radio class='radio' value="1" checked>男</radio>
+        <radio class='radio' value="0">女</radio>
+      </radio-group>
+    </view>
+    <view class='form_name age'>
+      <view class='{{flag? "require":"error_tips"}}'>{{messageTitle.ageTitle}}</view>
+      <input class='form_input' type='number' name="age" value='{{form.age}}'></input>
+    </view>
+    <view class='form_name city'>
+      <view class='{{flag? "require":"error_tips"}}'>{{messageTitle.cityTitle}}</view>
+      <!-- <input class='form_input' name="city" value='{{form.city}}'></input> -->
+      <picker class='form_input' mode="region" bindchange="bindRegionChange" name="city" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class='form_name professional'>
+      <view class='{{flag? "require":"error_tips"}}'>{{messageTitle.professTitle}}</view>
+      <!-- <input class='form_input' type='number' name="professional" value='{{form.professional}}'></input> -->
+      <select name="professional" value="{{form.professional}}" select-data='{{selectData}}' bind:getData="getData"></select>
+
+    </view>
+  </view>
+
+  <view class='footer'>
+    <button form-type="submit" class='submit'>提交</button>
+  </view>
+</form>

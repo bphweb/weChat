@@ -1,0 +1,8 @@
+<view class="personal_detail">
+  <block wx:for="{{personalMessage}}">
+    <view class="personal_detail-message">
+      <view class='personal_detail-left'>{{item.title}}</view>
+      <view class='personal_detail-right'>{{item.name}}</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,19 @@
+<template name="content">
+  <view class='content_wrapper' bindtap="changeDetail">
+    <view class='content'>
+      <view class='content_left'>
+        <image src=''></image>
+      </view>
+      <view class='content_right'>
+        <view class='content_right-title'>中鸿信2018年中秋拍精品展</view>
+        <view class='content_right-classify'>
+          <text class='content_right-text'>#行业</text>
+        </view>
+        <view class='content_right-date'>12/15 周六</view>
+
+        <view class='content_right-address'>浙江杭州</view>
+        <button class='content_right-btn' catchtap='changeSignup'>立即报名</button>
+      </view>
+    </view>
+  </view>
+</template>

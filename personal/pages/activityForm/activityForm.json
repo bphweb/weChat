@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "创办活动",
+  "usingComponents": {
+    "select": "../../../components/select/select"
+  }
+}

@@ -1,0 +1,45 @@
+<view class='search_page'>
+  <view class='header'>
+  <view class='header_search'>
+    <icon class='header_search-icon' type='search' size='12.5'></icon>
+    <input class='header_search-input' value='{{inputValue}}' placeholder-class='holder_input' placeholder='星球大战' bindinput='searchInput' bindconfirm='searchConfirm' confirm-type='search'></input>
+    <icon class='header_cleaer-icon' bindtap='clearInput' type='clear' size='12.5'></icon>
+  </view> 
+  <view class='header_address'>
+    <text class='header_address-title'>杭州</text>
+    <image class='header_address-img' src='../../images/iconDropDownList.png'></image>
+  </view>
+</view>
+
+  <view>
+    <!-- 搜索提示部分 -->
+    <view class="wxSearchMindKey">
+      <view class="wxSearchMindKeyList">
+        <block wx:for="{{wxSearchData.tipKeys}}">
+          <view class="wxSearchMindKeyItem" bindtap="wxSearchKeyTap" data-key="{{item}}">{{item}}</view>
+        </block>
+      </view>
+    </view>
+
+    <view class="search_wrapper search_history-content" wx:if="{{searchHistoryData.length}}">
+      <view class="search_history">
+        <text class="search-title">历史搜索</text>
+        <image src='/images/iconDeleteHistory.png' class='deteleImg' bindtap="searchDeleteAll" />
+      </view>
+      <view class="search-list">
+        <block wx:for="{{searchHistoryData}}">
+          <view class="search-item" bindtap="wxSearchKeyTap" data-key="{{item.id}}">{{item.value}}</view>
+        </block>
+      </view>
+    </view>
+
+    <view class="search_wrapper">
+      <text class="search-title">热门榜</text>
+      <view class="search-list">
+        <block wx:for="{{hotSearchData.hotKeys}}">
+          <view class="search-item" bindtap="hotSearchKeyTap" data-key="{{item}}">{{item}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

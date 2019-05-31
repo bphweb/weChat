@@ -1,0 +1,88 @@
+.my_activity {
+  background: rgba(239, 239, 244, 1);
+}
+
+.header_swiper {
+  background: white;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 16rpx;
+}
+
+.tab {
+  font-size: 34rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(31, 31, 31, 1);
+}
+
+.tab_checked {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: rgba(250, 132, 91, 1);
+}
+
+.container {
+  background: white;
+  border-bottom: 1rpx solid rgba(214, 214, 219, 1);
+}
+
+.container_wrapper-img {
+  width: 702rpx;
+  height: 351rpx;
+  border-radius: 10rpx;
+  margin: 20rpx 24rpx;
+}
+
+.container_wrapper-title {
+  font-size: 32rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: rgba(31, 31, 31, 1);
+  line-height: 48rpx;
+  padding-left: 27rpx;
+}
+
+.container_wrapper-address {
+  font-size: 26rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(79, 79, 79, 1);
+  line-height: 39rpx;
+  padding-top: 20rpx;
+  padding-left:24rpx;
+}
+
+.container_wrapper-state {
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: rgba(250, 132, 91, 1);
+  padding-top: 19rpx;
+  padding-bottom: 20rpx;
+}
+.self_operation{
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-end;
+  position:relative;
+  bottom:20rpx;
+}
+.operation{
+  width:144rpx;
+  height:40rpx;
+  border:1rpx solid rgba(145,145,145,1);
+  border-radius:10rpx;
+  font-size:26rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(79,79,79,1);
+  line-height:39rpx;
+  text-align: center;
+  margin-right: 30rpx;
+}
+.operation:nth-last-child(1){
+  margin-right:24rpx;
+}

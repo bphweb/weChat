@@ -1,0 +1,50 @@
+<view class='my_page'>
+  <view class='header'>
+    <view class='avator'>
+      <image class='avator_img' src='{{avatarImg}}'></image>
+      <view class='nickname'>{{nickName}}</view>
+    </view>
+  </view>
+
+  <view class='center'>
+    <view class='center_top' catchtap='myActivePage'>
+     <view class='my_active'>
+      <text class='active'>我的活动</text>
+      <image class='active_img' src='../../images/u359.png'></image></view>
+    </view>
+    <view class='center_bottom'>
+      <view class='center_bottom_classify'>
+        <image class='center_bottom_img' src=''></image>
+        <text>待支付</text>
+      </view>
+      <view class='center_bottom_classify'>
+        <image class='center_bottom_img' src=''></image>
+        <text>待参加</text>
+      </view>
+      <view class='center_bottom_classify'>
+        <image class='center_bottom_img' src=''></image>
+        <text>我创办的</text>
+      </view>
+      <view class='center_bottom_classify'>
+        <image class='center_bottom_img' src=''></image>
+        <text>已完成</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='sign' catchtap='sign'>
+     <view class='my_active'>
+      <text class='active'>签到领粮票</text>
+      <image class='active_img' src='../../images/u359.png'></image></view>
+  </view>
+  <view class='sign'>
+     <view class='my_active'>
+      <text class='active'>我的收藏</text>
+      <image class='active_img' src='../../images/u359.png'></image></view>
+  </view>
+  <view class='sign' catchtap='founded'>
+     <view class='my_active'>
+      <text class='active'>创办活动</text>
+      <image class='active_img' src='../../images/u359.png'></image></view>
+  </view>
+</view>

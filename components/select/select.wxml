@@ -1,0 +1,9 @@
+<view class='selectBox'>
+  <view class='content' bindtap='selectToggle'>
+    <view class='content_text'>{{nowText}}</view>
+    <image src='../../images/u632.png' class='content_img' animation="{{animationData}}"></image>
+  </view>
+  <view class='select_list' wx:if="{{selectShow}}">
+    <view wx:for="{{selectData}}" data-index="{{item.id}}" wx:key='item.id' class='select_item' bindtap='setText'>{{item.text}}</view>
+  </view>
+</view>
